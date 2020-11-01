@@ -12,15 +12,10 @@ namespace Todo.Api
     public class Startup : FunctionsStartup
     {
         public override void Configure(IFunctionsHostBuilder builder)
-        {
-
-            var serviceCollection = (ServiceCollection)builder.Services;
-            var config = serviceCollection.FirstOrDefault(p => p.ServiceType == typeof(IConfiguration))?.ImplementationInstance as IConfiguration;
-
-
+        {           
             string SqlConnection = Environment.GetEnvironmentVariable("SqlConnectionString");
             builder.Services.AddDbContext<ToDoContext>(
-                options => options.UseNpgsql(SqlConnection));
+                options => options.UseNpgsql(SqlConnection));            
         }
     }
 }
