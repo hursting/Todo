@@ -15,10 +15,10 @@ using System.Diagnostics;
 
 namespace Todo.Api
 {
-    public class TodoController
+    public class TodoHttp
     {
         private readonly ToDoContext _context;
-        public TodoController(ToDoContext context)
+        public TodoHttp(ToDoContext context)
         {
             _context = context;
         }
