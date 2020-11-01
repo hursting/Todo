@@ -2,7 +2,7 @@
 
 namespace Todo.Api
 {
-    public class Post
+    public class TodoItem
     {
 
         public int Id { get; set; }
